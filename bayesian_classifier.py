@@ -14,8 +14,7 @@ class BayesianClassifier:
     def fit(self, dataframe):
         """
         Fit Naive Bayes parameters according to train data message and authors.
-        :param message: pd.DataFrame|list - train input/messages
-        :param authors: pd.DataFrame|list - train output/labels
+        :param dataframe: pd.DataFrame - train data with messages and labels
         :return: None
         """
         for index, text in dataframe.iterrows():
@@ -87,10 +86,10 @@ class BayesianClassifier:
 
     def score(self, dataframe):
         """
-        Return the mean accuracy on the given test data and labels - the efficiency of a trained model.
-        :param X: pd.DataFrame|list - test data - messages
-        :param y: pd.DataFrame|list - test labels
-        :return:
+        :param dataframe: pd.DataFrame - test data - messages and labels
+
+        :return: the mean accuracy on the given test data and labels -
+        the efficiency of a trained model.
         """
         score = 0
         number = 0

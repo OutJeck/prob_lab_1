@@ -7,9 +7,9 @@ import string
 
 def process_data(data_file):
     """
-    Function for data processing and split it into messages and labels sets.
-    :param data_file: str - train data
-    :return: pd.DataFrame|list, pd.DataFrame|list - messages and labels data frames or lists
+    Function for data processing and returns DataFrame.
+    :param data_file: str - path to train data
+    :return: pd.DataFrame|list - id, messages and authors data frames
     """
     stop_words = read_stop_words()
     data = pd.read_csv(data_file)
